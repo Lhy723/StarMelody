@@ -1,5 +1,5 @@
 import { Cloud, Gem, Music2, Star } from "lucide-react";
-import { characterSheets, profileArt } from "../data/ocAssets";
+import { avatars, characterSheets, profileArt } from "../data/ocAssets";
 import SectionHeader from "./SectionHeader";
 
 const traits = [
@@ -12,7 +12,7 @@ const traits = [
 export default function Profile({ onOpenImage }) {
   return (
     <section className="profile-section" id="profile">
-      <SectionHeader eyebrow="profile" title="像一首落在雪里的小调">
+      <SectionHeader title="角色设定">
         霜白长发、冰蓝裙摆、云朵挂坠和星屑发饰，是她最容易被记住的轮廓。
       </SectionHeader>
 
@@ -37,13 +37,13 @@ export default function Profile({ onOpenImage }) {
           </div>
 
           <div className="look-rail" aria-label="人设预览">
-            {characterSheets.map((sheet) => (
+            {[...characterSheets, ...avatars].map((sheet) => (
               <button
-                key={sheet.id}
+                key={sheet.src}
                 type="button"
                 onClick={() => onOpenImage(sheet)}
               >
-                <img src={sheet.src} alt={sheet.title} />
+                <img src={sheet.src} alt={sheet.title} loading="lazy" />
                 <span>{sheet.title}</span>
               </button>
             ))}

@@ -1,0 +1,20 @@
+.reading-column { max-width: 780px; margin-inline: auto; padding-block: clamp(40px, 7vw, 86px) 80px; }
+.article-header h1 { margin-block: 18px 14px; font-size: clamp(32px, 5vw, 62px); line-height: 1.13; overflow-wrap: anywhere; }
+.article-header p { display: flex; gap: 14px; color: var(--muted); font-size: 14px; }
+.article-cover { display: block; width: 100%; height: auto; max-height: 310px; object-fit: cover; border-radius: 0; margin-top: 28px; }
+.article-toc { margin-top: 30px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); }
+.article-toc summary { cursor: pointer; }
+.article-toc ul { margin: 8px 0 0; padding-inline-start: 22px; }
+.article-toc a:hover { text-decoration: underline; }
+.article-body { padding-top: 22px; font-size: 16px; line-height: 1.8; overflow-wrap: anywhere; }
+.article-body > * { margin-block: 18px; }
+.article-body h2, .article-body h3, .article-body h4 { margin: 32px 0 12px; line-height: 1.35; scroll-margin-top: 20px; }
+.article-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.article-body img { max-width: 100%; height: auto; }
+.article-body li { margin-block: 4px; }
+.article-body pre { overflow-x: auto; padding: 16px; border-radius: 6px; border: 1px solid var(--line); font-size: 14px; line-height: 1.6; }
+.article-body :not(pre) > code { font-family: var(--mono); padding: 2px 4px; background: var(--wash); border-radius: 4px; font-size: .9em; }
+.article-body blockquote { margin-inline: 0; border-left: 1px solid var(--accent); padding: 5px 14px; color: var(--muted); background: var(--blue-paper); }
+.article-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+.article-body th, .article-body td { padding: 5px 12px; border: 1px solid var(--line); }
+.article-body math[display="block"] { max-width: 100%; overflow-x: auto; }

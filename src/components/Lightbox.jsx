@@ -1,20 +1,36 @@
+import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 
 export default function Lightbox({ image, onClose }) {
-  if (!image) {
-    return null;
-  }
+  const dialog = useRef(null);
+
+  useEffect(() => {
+    const element = dialog.current;
+    element.showModal();
+    return () => {
+      if (element.open) element.close();
+    };
+  }, []);
 
   return (
-    <div className="lightbox" role="dialog" aria-modal="true" aria-label={image.title}>
-      <button className="lightbox-backdrop" type="button" onClick={onClose} />
+    <dialog
+      ref={dialog}
+      className="lightbox"
+      aria-label={image.title}
+      onClose={onClose}
+      onClick={(event) => {
+        if (event.target === event.currentTarget) dialog.current.close();
+      }}
+    >
       <div className="lightbox-panel">
-        <button className="lightbox-close" type="button" onClick={onClose} aria-label="关闭">
-          <X size={22} />
-        </button>
+        <form method="dialog">
+          <button className="lightbox-close" type="submit" aria-label="关闭">
+            <X size={22} />
+          </button>
+        </form>
         <img src={image.src} alt={image.title} />
-        <span>{image.title}</span>
+        <p>{image.title}</p>
       </div>
-    </div>
+    </dialog>
   );
 }

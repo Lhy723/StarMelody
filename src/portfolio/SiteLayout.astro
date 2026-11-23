@@ -1,0 +1,48 @@
+---
+import { ArrowUpRight } from "lucide-react";
+import { ClientRouter } from "astro:transitions";
+import { github } from "./content.js";
+import "./portfolio.css";
+
+interface Props {
+  title: string;
+  description: string;
+  current: "home" | "projects" | "blog" | "archive";
+}
+
+const { title, description, current } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f5ee" />
+    <title>{title}</title>
+    <ClientRouter fallback="swap" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到内容</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href={base} aria-label="星音首页" data-astro-prefetch aria-current={current === "home" ? "page" : undefined}>
+        星音
+      </a>
+      <nav aria-label="主导航">
+        <a href={`${base}projects/`} data-astro-prefetch aria-current={current === "projects" ? "page" : undefined}>项目</a>
+        <a href={`${base}blog/`} data-astro-prefetch aria-current={current === "blog" ? "page" : undefined}>博客</a>
+        <a href={`${base}archive/`} data-astro-prefetch aria-current={current === "archive" ? "page" : undefined}>OC</a>
+        <a class="text-link" href={github}>GitHub <ArrowUpRight className="link-icon" size={14} strokeWidth={1.7} aria-hidden="true" /></a>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <slot />
+    </main>
+    <footer class="wrap site-footer">
+      <a href={base}>星音</a>
+      <a class="text-link" href={github}>GitHub <ArrowUpRight className="link-icon" size={14} strokeWidth={1.7} aria-hidden="true" /></a>
+    </footer>
+  </body>
+</html>

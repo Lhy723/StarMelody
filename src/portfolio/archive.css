@@ -1,0 +1,103 @@
+.page-intro .archive-title {
+  font-size: clamp(46px, 9vw, 96px);
+  overflow-wrap: anywhere;
+}
+
+.archive-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.archive-nav a:hover { text-decoration: underline; }
+
+.profile-section, .gallery-section, .stickers-section {
+  padding-block: 32px 48px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 20px;
+}
+
+.section-header { margin-bottom: 22px; }
+.section-header h2 { font-size: clamp(24px, 3vw, 32px); }
+.section-header p { margin-top: 7px; color: var(--muted); line-height: 1.65; }
+.profile-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 24px; }
+.profile-notes { display: grid; gap: 18px; align-content: start; }
+.trait-grid, .look-rail { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.trait { padding: 14px; border: 1px solid var(--line); border-radius: 0; }
+.trait svg { display: block; margin-bottom: 8px; color: var(--accent); }
+.trait span { display: block; margin-bottom: 4px; font-size: 13px; color: var(--muted); }
+.trait strong { font-size: 14px; }
+.look-rail { grid-template-columns: repeat(auto-fit, minmax(78px, 1fr)); }
+.look-rail span, .art-tile span { display: block; padding: 8px 10px; font-size: 13px; color: var(--muted); }
+
+.gallery-topline { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; column-gap: 18px; }
+.filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
+.filter-bar button { display: inline-flex; align-items: center; gap: 5px; padding: 7px 10px; }
+.filter-bar button[aria-pressed="true"] { background: var(--blue-paper); color: var(--accent); border-color: var(--accent); }
+.masonry-grid, .sticker-cloud { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.sticker-cloud { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+
+.profile-portrait, .look-rail button, .filter-bar button, .art-tile, .sticker, .lightbox-close {
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-portrait, .look-rail button, .art-tile, .sticker {
+  display: block;
+  width: 100%;
+  align-self: start;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+}
+
+.profile-portrait:hover, .look-rail button:hover, .filter-bar button:hover, .art-tile:hover, .sticker:hover {
+  border-color: var(--accent);
+}
+
+.profile-portrait img, .look-rail img, .art-tile img, .sticker img { display: block; width: 100%; }
+.look-rail img { aspect-ratio: 1; object-fit: cover; }
+.art-tile img { aspect-ratio: 4 / 3; object-fit: cover; }
+.sticker img { aspect-ratio: 1; object-fit: contain; }
+
+.lightbox {
+  max-width: calc(100vw - 28px);
+  max-height: calc(100dvh - 28px);
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: #182333;
+  color: white;
+}
+
+.lightbox::backdrop { background: #121c2cdd; }
+.lightbox-panel { position: relative; padding: 12px; }
+.lightbox-panel img { display: block; max-width: calc(100vw - 52px); max-height: calc(100dvh - 84px); object-fit: contain; }
+.lightbox-panel p { padding-top: 8px; font-size: 13px; }
+.lightbox-close { position: absolute; top: 17px; right: 17px; display: grid; place-items: center; width: 36px; height: 36px; background: #182333; }
+
+@media (max-width: 680px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .profile-portrait { max-width: 440px; }
+  .masonry-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sticker-cloud { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.filter-bar button, .profile-portrait, .look-rail button, .art-tile, .sticker {
+  transition: border-color 160ms, background-color 160ms, transform 175ms var(--ease-out);
+}
+.filter-bar button:active, .art-tile:active, .sticker:active { transform: scale(.98); }
+.masonry-grid { animation: surface-enter 200ms var(--ease-out) both; }
+@media (hover: hover) {
+  .art-tile:hover, .sticker:hover { transform: translateY(-3px); }
+}
+.lightbox[open] { animation: lightbox-enter 205ms var(--ease-out) both; }
+.lightbox[open]::backdrop { animation: page-exit 170ms ease-out reverse both; }
+@keyframes lightbox-enter { from { opacity: 0; transform: scale(.975) translateY(6px); } }

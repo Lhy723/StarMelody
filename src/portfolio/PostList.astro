@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.date.localeCompare(a.data.date));
+const { limit = posts.length } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<ul class="blog-list">
+  {posts.slice(0, limit).map(({ id, data }) => (
+    <li>
+      <a class="blog-row" data-astro-prefetch href={`${base}blog/${id}/`}>
+        <span><strong>{data.title}</strong><span>{data.category}</span></span>
+        <time datetime={data.date}>{data.date}</time>
+        <span class="link-icon" aria-hidden="true">→</span>
+      </a>
+    </li>
+  ))}
+</ul>

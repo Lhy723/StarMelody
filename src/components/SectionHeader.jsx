@@ -1,7 +1,6 @@
-export default function SectionHeader({ eyebrow, title, children }) {
+export default function SectionHeader({ title, children }) {
   return (
     <div className="section-header">
-      <span>{eyebrow}</span>
       <h2>{title}</h2>
       {children ? <p>{children}</p> : null}
     </div>

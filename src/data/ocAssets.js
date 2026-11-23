@@ -1,4 +1,4 @@
-const asset = (path) => encodeURI(`/OC/${path}`);
+const asset = (path) => encodeURI(`${import.meta.env.BASE_URL}OC/${path}`);
 
 export const avatars = [
   {
@@ -115,5 +115,4 @@ export const stickers = stickerPaths.map((path, index) => ({
   category: "表情包",
 }));
 
-export const heroArt = asset("插画/ChatGPT Image 2026年4月27日 01_09_02.png");
 export const profileArt = asset("人设/ChatGPT Image 2026年4月23日 17_34_09.png");

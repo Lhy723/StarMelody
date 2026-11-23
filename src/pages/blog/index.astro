@@ -1,0 +1,14 @@
+---
+import PostList from "../../portfolio/PostList.astro";
+import SiteLayout from "../../portfolio/SiteLayout.astro";
+---
+<SiteLayout title="博客 · 星音" description="星音的开发笔记、算法练习和随笔。" current="blog">
+  <header class="page-intro">
+    <h1>博客</h1>
+    <p>开发笔记、算法练习，以及一些随笔。</p>
+  </header>
+  <section class="content-section" aria-labelledby="posts-title">
+    <div class="section-heading"><h2 id="posts-title">文章目录</h2></div>
+    <PostList />
+  </section>
+</SiteLayout>

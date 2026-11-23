@@ -1,0 +1,17 @@
+---
+import OCArchive from "../components/OCArchive.jsx";
+import SiteLayout from "../portfolio/SiteLayout.astro";
+import "../portfolio/archive.css";
+---
+<SiteLayout title="StarMelody · 星音" description="原创角色 StarMelody 的人设、插画与表情包。" current="archive">
+  <header class="page-intro">
+    <h1 class="archive-title">StarMelody</h1>
+    <p>原创角色档案</p>
+    <nav class="archive-nav" aria-label="角色档案导航">
+      <a href="#profile">人设</a>
+      <a href="#gallery">插画</a>
+      <a href="#stickers">表情包</a>
+    </nav>
+  </header>
+  <OCArchive client:load />
+</SiteLayout>

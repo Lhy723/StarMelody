@@ -1,0 +1,330 @@
+[
+  {
+    "name": "Lhy723",
+    "description": null,
+    "language": null,
+    "url": "https://github.com/Lhy723/Lhy723",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "Yumerin",
+    "description": "Local-first AI emotional companion for Android, built with Kotlin Multiplatform.",
+    "language": "Kotlin",
+    "url": "https://github.com/Lhy723/Yumerin",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "awesome-dsh-plugin",
+    "description": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
+    "language": null,
+    "url": "https://github.com/Lhy723/awesome-dsh-plugin",
+    "fork": true,
+    "archived": false
+  },
+  {
+    "name": "dsh-hero-theme",
+    "description": "HeroUI v3 theme builder for DeepSeek Harness Web and Desktop — live accent, base, font, radius and appearance controls.",
+    "language": "JavaScript",
+    "url": "https://github.com/Lhy723/dsh-hero-theme",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "dsh-neu-theme",
+    "description": "DeepSeek Harness Web 的轻拟物与磨砂玻璃主题插件，提供浅色/深色主题、环境光、材质纹理和细腻微交互。Neumorphism + glassmorphism theme plugin for DeepSeek Harness Web with warm light/dark palettes, ambient lighting, grain texture, and subtle micro-interactions.",
+    "language": "JavaScript",
+    "url": "https://github.com/Lhy723/dsh-neu-theme",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "temli",
+    "description": null,
+    "language": "Rust",
+    "url": "https://github.com/Lhy723/temli",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "temli-demo",
+    "description": null,
+    "language": "JavaScript",
+    "url": "https://github.com/Lhy723/temli-demo",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "MelodyWork",
+    "description": null,
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/MelodyWork",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "melody-electron-vue-template",
+    "description": "Electron + Vue 3 desktop app template: frameless window, sidebar menu, dark/light theme, persisted settings, interactive component demo pages",
+    "language": "Vue",
+    "url": "https://github.com/Lhy723/melody-electron-vue-template",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "folia-major",
+    "description": "专注于绚丽的歌词动画效果的本地音乐/navidrome/第三方多平台在线音乐播放器",
+    "language": null,
+    "url": "https://github.com/Lhy723/folia-major",
+    "fork": true,
+    "archived": false
+  },
+  {
+    "name": "MelodyHub",
+    "description": "一个本地 LLM 路由转发工具",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/MelodyHub",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "melody-build",
+    "description": null,
+    "language": "Rust",
+    "url": "https://github.com/Lhy723/melody-build",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "dsh-agent-canvas",
+    "description": "Agent / Subagent / Workflow canvas tab for DSH Web",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/dsh-agent-canvas",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "dsh-self-evolution",
+    "description": "Benchmark-driven self-evolution for DeepSeek Harness · 冻结基准上的 Agent Profile 自我进化：评测 → 候选 → 严格接受/回滚",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/dsh-self-evolution",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "zhizhi",
+    "description": null,
+    "language": "JavaScript",
+    "url": "https://github.com/Lhy723/zhizhi",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "melody-harness",
+    "description": null,
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/melody-harness",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "MMCL",
+    "description": "Melody Minecraft Launcher，一个MacOS原生MC启动器",
+    "language": "Swift",
+    "url": "https://github.com/Lhy723/MMCL",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "household-power-forecasting",
+    "description": "家庭用电多步预测实验",
+    "language": "Python",
+    "url": "https://github.com/Lhy723/household-power-forecasting",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "firefly-codex-pet",
+    "description": "Codex 流萤桌宠",
+    "language": null,
+    "url": "https://github.com/Lhy723/firefly-codex-pet",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "deepseek2responses",
+    "description": "Deepseek API 转换成 responses API 格式的小工具",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/deepseek2responses",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "awesome-ai-agent-evaluation",
+    "description": "A curated list of benchmarks, eval harnesses, papers, datasets, and production checks for AI agents.",
+    "language": null,
+    "url": "https://github.com/Lhy723/awesome-ai-agent-evaluation",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "StarMelody",
+    "description": null,
+    "language": "JavaScript",
+    "url": "https://github.com/Lhy723/StarMelody",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "karmind-skill",
+    "description": null,
+    "language": "Python",
+    "url": "https://github.com/Lhy723/karmind-skill",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "obsidian-karmind",
+    "description": "A Obsidian Plugin",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/obsidian-karmind",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "obsidian-releases",
+    "description": "Community plugins list, theme list, and releases of Obsidian.",
+    "language": null,
+    "url": "https://github.com/Lhy723/obsidian-releases",
+    "fork": true,
+    "archived": false
+  },
+  {
+    "name": "melody-music-player",
+    "description": null,
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/melody-music-player",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "ditto-skill",
+    "description": "Ditto Skill 是专为 Claude Code、Cursor、Codex 等 AI 编程助手设计的“仓库蒸馏”技能包（Skill）。",
+    "language": "Python",
+    "url": "https://github.com/Lhy723/ditto-skill",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "star-m3u8",
+    "description": "M3U8 视频下载器 - 基于 Electron + Vue + TypeScript 构建的桌面应用",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/star-m3u8",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "paper-arxiv-adapter",
+    "description": "轻量封装 arxiv.py/feedparser，统一「单篇 / 批量 / 订阅」采集接口，配备现代化 Web 管理界面。",
+    "language": "Vue",
+    "url": "https://github.com/Lhy723/paper-arxiv-adapter",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "melody-ui",
+    "description": "MelodyUI，一个自用的前端组件库。",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/melody-ui",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "vben-admin-tauri-app",
+    "description": "这是一个基于 Vben Admin 构建的 Tauri 桌面应用程序模板。",
+    "language": "Vue",
+    "url": "https://github.com/Lhy723/vben-admin-tauri-app",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "electron-template-star",
+    "description": "一个现代化的 Electron + Vue 3 桌面应用开发模板，集成了最新的前端技术栈和最佳实践。",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/electron-template-star",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "vben-admin-electron-app",
+    "description": "本项目是基于 Vue Vben Admin 的 Electron 桌面应用定制版本",
+    "language": "Vue",
+    "url": "https://github.com/Lhy723/vben-admin-electron-app",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "mcp-spec-driven-development",
+    "description": "一个为AI助手提供系统化功能开发方法论的MCP工具。",
+    "language": "Python",
+    "url": "https://github.com/Lhy723/mcp-spec-driven-development",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "vscode-ai-commit-generator",
+    "description": "一个 VS Code 扩展，使用LLM根据暂存的代码变更自动生成规范的 Git 提交信息。",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/vscode-ai-commit-generator",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "FishCircles",
+    "description": "基于微信小程序的渔友同城社交平台",
+    "language": "JavaScript",
+    "url": "https://github.com/Lhy723/FishCircles",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "seed-vc",
+    "description": "zero-shot voice conversion & singing voice conversion, with real-time support",
+    "language": null,
+    "url": "https://github.com/Lhy723/seed-vc",
+    "fork": true,
+    "archived": false
+  },
+  {
+    "name": "blog-vuepress",
+    "description": "星音的博客",
+    "language": "TypeScript",
+    "url": "https://github.com/Lhy723/blog-vuepress",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "BookComment",
+    "description": "书籍评论系统",
+    "language": "Java",
+    "url": "https://github.com/Lhy723/BookComment",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "College-Fraud-Information-Management",
+    "description": "高校诈骗信息管理系统",
+    "language": "Vue",
+    "url": "https://github.com/Lhy723/College-Fraud-Information-Management",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "name": "DoubanbooksTop250",
+    "description": null,
+    "language": "HTML",
+    "url": "https://github.com/Lhy723/DoubanbooksTop250",
+    "fork": false,
+    "archived": false
+  }
+]

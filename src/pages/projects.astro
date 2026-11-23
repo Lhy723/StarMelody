@@ -1,0 +1,24 @@
+---
+import ProjectList from "../portfolio/ProjectList.astro";
+import RepositoryDirectory from "../portfolio/RepositoryDirectory.astro";
+import SiteLayout from "../portfolio/SiteLayout.astro";
+import { github, repositories } from "../portfolio/content.js";
+---
+<SiteLayout title="项目 · 星音" description="星音的开源项目，包括桌面与移动应用、LLM 工具和 DeepSeek Harness 插件。" current="projects">
+  <header class="page-intro project-intro">
+    <h1>项目</h1>
+    <p>桌面与移动应用、模型接入工具，以及给 DeepSeek Harness 做的插件。</p>
+    <a class="text-link" href="#repositories">浏览 {repositories.length} 个公开仓库 <span class="link-icon" aria-hidden="true">↓</span></a>
+  </header>
+  <section class="content-section" aria-labelledby="featured-title">
+    <div class="section-heading"><h2 id="featured-title">精选项目</h2></div>
+    <ProjectList />
+  </section>
+  <section class="content-section" id="repositories" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <h2 id="projects-title">仓库目录</h2>
+      <a class="text-link" href={`${github}?tab=repositories`}>在 GitHub 查看 <span class="link-icon" aria-hidden="true">↗</span></a>
+    </div>
+    <RepositoryDirectory />
+  </section>
+</SiteLayout>

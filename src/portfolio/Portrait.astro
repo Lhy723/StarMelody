@@ -1,0 +1,52 @@
+---
+import { ArrowRight, Pause, Play } from "lucide-react";
+import avatar from "./cloud-bell.webp";
+
+const base = import.meta.env.BASE_URL;
+---
+<starmelody-portrait class="hero-portrait">
+  <figure>
+    <div class="portrait-stage">
+      <img class="portrait-fallback" src={avatar.src} width="540" height="540" alt="原创角色 StarMelody，霜白长发与冰蓝发饰" />
+      <canvas width="420" height="420" role="img" aria-label="原创角色 StarMelody 的点阵肖像" hidden></canvas>
+    </div>
+    <figcaption>
+      <span class="portrait-caption">StarMelody</span>
+      <div class="portrait-actions">
+        <button type="button" class="portrait-pause" aria-label="暂停点阵动效" aria-pressed="false" hidden>
+          <Pause className="pause-icon" size={15} aria-hidden="true" />
+          <Play className="play-icon" size={15} aria-hidden="true" />
+        </button>
+        <a class="text-link" data-astro-prefetch href={`${base}archive/`}>角色档案 <ArrowRight className="link-icon" size={15} strokeWidth={1.7} aria-hidden="true" /></a>
+      </div>
+    </figcaption>
+  </figure>
+</starmelody-portrait>
+
+<script>
+  import { mountPortrait } from "./portrait.js";
+
+  class StarMelodyPortrait extends HTMLElement {
+    connectedCallback() {
+      const image = this.querySelector("img");
+      const canvas = this.querySelector("canvas");
+      const toggle = this.querySelector("button");
+      if (image && canvas && toggle) {
+        image.decode().then(() => {
+          if (!this.isConnected || this.dispose) return;
+          this.dispose = mountPortrait(this, canvas, toggle);
+          if (this.dispose) image.hidden = true;
+        }).catch(() => {
+          // The original portrait remains visible if Canvas is unavailable.
+        });
+      }
+    }
+
+    disconnectedCallback() {
+      this.dispose?.();
+      this.dispose = undefined;
+    }
+  }
+
+  if (!customElements.get("starmelody-portrait")) customElements.define("starmelody-portrait", StarMelodyPortrait);
+</script>

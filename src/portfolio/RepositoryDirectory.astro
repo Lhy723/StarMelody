@@ -1,0 +1,89 @@
+---
+import { Search } from "lucide-react";
+import { repositories } from "./content.js";
+---
+<repository-directory>
+  <div class="repository-toolbar" data-controls hidden>
+    <label class="repository-search">
+      <Search size={17} aria-hidden="true" />
+      <span class="sr-only">搜索仓库</span>
+      <input type="search" name="query" placeholder="搜索仓库、语言或关键词" />
+    </label>
+    <div class="repository-filters" role="group" aria-label="仓库类型">
+      <button type="button" data-kind="all" aria-pressed="true">全部</button>
+      <button type="button" data-kind="original" aria-pressed="false">原创</button>
+      <button type="button" data-kind="fork" aria-pressed="false">Fork</button>
+    </div>
+  </div>
+  <p class="repository-count" aria-live="polite" data-count>{repositories.length} 个仓库</p>
+  <ul class="repository-list">
+    {repositories.map(({ name, description, language, url, fork, archived }) => (
+      <li data-repository={fork ? "fork" : "original"} data-search={[name, description, language].filter(Boolean).join(" ").toLowerCase()}>
+        <a class="repository-row" href={url}>
+          <span class="repo-details">
+            <strong>{name}</strong>
+            {description && <span class="repo-description">{description}</span>}
+          </span>
+          <span class="repo-meta">
+            {language && <span>{language}</span>}
+            {fork && <span>Fork</span>}
+            {archived && <span>已归档</span>}
+          </span>
+          <span class="link-icon" aria-hidden="true">↗</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <div class="repository-empty" data-empty hidden>
+    <p>没找到符合条件的仓库。</p>
+    <button type="button" data-reset>清除筛选</button>
+  </div>
+</repository-directory>
+
+<script>
+  class RepositoryDirectory extends HTMLElement {
+    connectedCallback() {
+      if (this.initialized) return;
+
+      const controls = this.querySelector("[data-controls]");
+      const input = this.querySelector("input");
+      const buttons = [...this.querySelectorAll("button[data-kind]")];
+      const rows = [...this.querySelectorAll("[data-repository]")];
+      const count = this.querySelector("[data-count]");
+      const empty = this.querySelector("[data-empty]");
+      const reset = this.querySelector("[data-reset]");
+      let kind = "all";
+
+      function update() {
+        const query = input.value.trim().toLowerCase();
+        let visible = 0;
+        for (const row of rows) {
+          const matches = row.dataset.search.includes(query) && (kind === "all" || row.dataset.repository === kind);
+          row.hidden = !matches;
+          if (matches) visible += 1;
+        }
+        for (const button of buttons) button.setAttribute("aria-pressed", String(button.dataset.kind === kind));
+        count.textContent = `${visible} / ${rows.length} 个仓库`;
+        empty.hidden = visible > 0;
+      }
+
+      input.addEventListener("input", update);
+      for (const button of buttons) {
+        button.addEventListener("click", () => {
+          kind = button.dataset.kind;
+          update();
+        });
+      }
+      reset.addEventListener("click", () => {
+        kind = "all";
+        input.value = "";
+        update();
+        input.focus();
+      });
+      controls.hidden = false;
+      this.initialized = true;
+    }
+  }
+
+  if (!customElements.get("repository-directory")) customElements.define("repository-directory", RepositoryDirectory);
+</script>

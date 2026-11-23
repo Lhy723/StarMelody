@@ -23,14 +23,14 @@ export default function Gallery({ onOpenImage }) {
   return (
     <section className="gallery-section" id="gallery">
       <div className="gallery-topline">
-        <SectionHeader eyebrow="gallery" title="把瞬间排成一条星轨">
+        <SectionHeader title="插画">
           雪夜、街灯、云朵和柔蓝色的光，留下她经过世界时的微小回声。
         </SectionHeader>
         <div className="filter-bar" aria-label="画廊筛选">
           {filters.map(([id, label, Icon]) => (
             <button
               key={id}
-              className={active === id ? "active" : ""}
+              aria-pressed={active === id}
               type="button"
               onClick={() => setActive(id)}
             >
@@ -41,10 +41,10 @@ export default function Gallery({ onOpenImage }) {
         </div>
       </div>
 
-      <div className="masonry-grid">
-        {visible.map((item, index) => (
+      <div className="masonry-grid" key={active}>
+        {visible.map((item) => (
           <button
-            className={`art-tile span-${(index % 5) + 1}`}
+            className="art-tile"
             key={item.id}
             type="button"
             onClick={() => onOpenImage(item)}
